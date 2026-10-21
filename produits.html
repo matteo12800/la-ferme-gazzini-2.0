@@ -154,6 +154,12 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
 .product-description { font-size: 15px; line-height: 1.75; margin: 14px 0 0; color: var(--muted); }
 .products-introduction p+p { margin-top: 20px; }
 .products-introduction a { text-decoration: underline; text-underline-offset: 3px; color: var(--green); }
+
+.catalogue-title { font: 400 42px/1.2 Georgia, serif; color: var(--green); margin: 0 0 18px; }
+.catalogue-intro { font-size: 17px; max-width: 740px; margin: 0 0 35px; }
+.product-card h3 { font: 400 24px/1.3 Georgia, serif; color: var(--green); margin: 20px 0 0; }
+.catalogue-section+.catalogue-section { border-top: 1px solid var(--border); padding-top: 60px; }
+@media (max-width: 700px) { .catalogue-title { font-size: 34px; } .catalogue-intro { font-size: 16px; } .catalogue-section+.catalogue-section { padding-top: 40px; } }
 </style>
 </head>
 <body>
@@ -177,47 +183,78 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
       <div class="hero-copy"><h1 id="page-title">Les produits de la ferme</h1></div>
     </section>
     <section class="products-introduction" aria-label="Introduction des produits">
-      <!-- Introduction et disponibilités à actualiser au fil des récoltes. -->
-      <p>À la Ferme Gazzini, nous développons une production diversifiée, pensée pour le marché local et les circuits courts. Les mûres et la lavande côtoient de petites plantations de raisins de table, de kiwis, de myrtilles et de grenadiers.</p>
-      <p>Nos cultures grandissent progressivement. Leur présentation ci-dessous ne garantit pas une disponibilité immédiate : <a href="contact.html">contactez-nous</a> pour connaître les récoltes et les modalités de vente du moment.</p>
+      <p>Ce qui pousse à la ferme, et ce que l’on aime vous faire découvrir : explorez <a href="#nos-plantes">nos plantes</a>, puis laissez-vous tenter par <a href="#nos-produits">nos produits</a>.</p>
+      <p>Pour connaître les disponibilités ou passer commande, <a href="contact.html">contactez-nous</a>.</p>
     </section>
-    <section class="products-list" aria-label="Les produits">
+    <section class="products-list catalogue-section" id="nos-plantes" aria-labelledby="titre-nos-plantes">
+      <h2 class="catalogue-title" id="titre-nos-plantes">Nos plantes</h2>
+      <p class="catalogue-intro">Mûres, lavande, vignes et autres fruits : une promenade parmi les cultures de la ferme.</p>
       <div class="products-grid">
-        <article class="product-card" aria-labelledby="produit-1">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-1"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-1">Les mûres</h2>
-          <p class="product-description">Nos 500 plants de mûriers sans épines appartiennent aux variétés Loch Ness et Loch Tay, choisies pour leurs fruits de gros calibre et leur bonne tenue après récolte. Les plantations se développent progressivement, avec une production échelonnée selon l’âge des plants.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-1">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-1"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-1">Les mûres</h3>
+          <p class="product-description">De petits fruits gourmands à découvrir au rythme des récoltes.</p>
         </article>
-        <article class="product-card" aria-labelledby="produit-2">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-2"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-2">La lavande</h2>
-          <p class="product-description">4 000 plants de lavande angustifolia ont été installés à partir d’août 2025. Cette culture aromatique occupe une place importante dans le développement de la ferme. Les formes de vente seront précisées au fil du projet.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-2">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-2"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-2">La lavande</h3>
+          <p class="product-description">Le parfum de la lavande, une invitation à prendre le temps.</p>
         </article>
-        <article class="product-card" aria-labelledby="produit-3">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-3"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-3">Le raisin de table</h2>
-          <p class="product-description">Plusieurs variétés de vigne de raisin de table sont cultivées à petite échelle. Les plants sont conduits sur des supports, avec une attention portée à leur développement. La disponibilité dépendra des récoltes.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-3">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-3"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-3">Les vignes</h3>
+          <p class="product-description">Le plaisir du raisin de table, à savourer au fil de la saison.</p>
         </article>
-        <article class="product-card" aria-labelledby="produit-4">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-4"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-4">Les kiwis</h2>
-          <p class="product-description">Quelques plants de kiwis communs viennent diversifier les cultures fruitières. Ils sont installés avec des supports, comme les mûriers et les vignes. Leur production sera proposée selon le développement des plants et les récoltes.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-4">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-4"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-4">Les kiwis</h3>
+          <p class="product-description">Une touche de fraîcheur parmi les fruits de la ferme.</p>
         </article>
-        <article class="product-card" aria-labelledby="produit-5">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-5"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-5">Les myrtilles</h2>
-          <p class="product-description">Plusieurs variétés de myrtilliers sont cultivées en pots, dans un substrat adapté. Le suivi de l’acidité de l’eau et du substrat accompagne leur croissance. Les quantités disponibles seront à confirmer auprès de la ferme.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-5">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-5"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-5">Les myrtilles</h3>
+          <p class="product-description">De petites baies à picorer et à retrouver dans vos envies gourmandes.</p>
         </article>
-        <article class="product-card" aria-labelledby="produit-6">
-          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
-          <div class="product-photo photo-slot" data-photo="produit-6"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
-          <h2 id="produit-6">Les grenades</h2>
-          <p class="product-description">Quelques grenadiers cultivés en pots complètent la diversité fruitière de l’exploitation. Cette culture est encore développée à petite échelle ; la disponibilité des fruits dépendra de leur évolution et des récoltes.</p>
+        <article class="product-card" aria-labelledby="nos-plantes-6">
+          <div class="product-photo photo-slot" data-photo="nos-plantes-6"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-plantes-6">Les grenadiers</h3>
+          <p class="product-description">Des fruits à découvrir parmi les cultures qui grandissent à la ferme.</p>
+        </article>
+      </div>
+    </section>
+    <section class="products-list catalogue-section" id="nos-produits" aria-labelledby="titre-nos-produits">
+      <h2 class="catalogue-title" id="titre-nos-produits">Nos produits</h2>
+      <p class="catalogue-intro">Des gourmandises aux petites attentions pour la maison, découvrez notre sélection.</p>
+      <div class="products-grid">
+        <article class="product-card" aria-labelledby="nos-produits-1">
+          <div class="product-photo photo-slot" data-photo="nos-produits-1"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-1">Confiture de mûres</h3>
+          <p class="product-description">La gourmandise des mûres à retrouver sur une tartine ou à partager au petit-déjeuner.</p>
+        </article>
+        <article class="product-card" aria-labelledby="nos-produits-2">
+          <div class="product-photo photo-slot" data-photo="nos-produits-2"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-2">Confiture de courge</h3>
+          <p class="product-description">Une confiture qui change des habitudes et invite à découvrir la courge autrement.</p>
+        </article>
+        <article class="product-card" aria-labelledby="nos-produits-3">
+          <div class="product-photo photo-slot" data-photo="nos-produits-3"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-3">Liqueur</h3>
+          <p class="product-description">Une découverte à partager lors d’un moment de dégustation.</p>
+        </article>
+        <article class="product-card" aria-labelledby="nos-produits-4">
+          <div class="product-photo photo-slot" data-photo="nos-produits-4"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-4">Sachets de lavande</h3>
+          <p class="product-description">Une touche parfumée pour glisser un peu de lavande dans votre quotidien.</p>
+        </article>
+        <article class="product-card" aria-labelledby="nos-produits-5">
+          <div class="product-photo photo-slot" data-photo="nos-produits-5"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-5">Bougies</h3>
+          <p class="product-description">Une petite lumière pour accompagner vos moments à la maison.</p>
+        </article>
+        <article class="product-card" aria-labelledby="nos-produits-6">
+          <div class="product-photo photo-slot" data-photo="nos-produits-6"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h3 id="nos-produits-6">Savon</h3>
+          <p class="product-description">Un essentiel du quotidien à découvrir parmi nos produits.</p>
         </article>
       </div>
     </section>
