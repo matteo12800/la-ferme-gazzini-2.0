@@ -60,3 +60,7 @@ Le formulaire fait un POST HTTPS natif vers FormSubmit, à destination de `la.fe
 **Activation indispensable :** au premier envoi réel, FormSubmit demande la confirmation de l’adresse destinataire par e-mail. Ouvrir le message de FormSubmit dans la boîte de la ferme (vérifier les indésirables) et confirmer. Après activation, effectuer un nouvel envoi réel pour vérifier la réception. L’ajout de l’action au HTML ne prouve pas l’activation ni la livraison des messages. Aucun envoi réel n’a été effectué pendant les tests.
 
 Le formulaire nécessite Internet et fonctionne normalement depuis une page hébergée par HTTP(S). Pour tester, utiliser le serveur local ou le site publié, plutôt qu’un fichier ouvert en file://. Le service affiche sa propre confirmation et peut demander une vérification anti-spam. Si l’envoi échoue, les liens directs e-mail et téléphone restent accessibles.
+
+## Pied de page lavande
+
+Un pied de page identique est présent après le contenu principal des quatre pages, inspiré de la référence 3.png : identité et trois colonnes Contacter, Commander, Suivre l’aventure. Fond lavande #ded5ed, logo original intégré et liens téléphone/e-mail. Les liens vers l’histoire, les produits et la galerie remplacent une inscription newsletter non configurée. Toute modification des coordonnées ou du pied de page doit être appliquée aux quatre HTML.

@@ -189,3 +189,33 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
 .contact-page>h1 { margin-bottom: 20px; }
 .contact-welcome { font-size: 18px; line-height: 1.7; margin: 0 0 45px; max-width: 650px; }
 @media (max-width: 700px) { .contact-welcome { font-size: 16px; margin-bottom: 32px; } }
+
+/* Shared lavender footer, outside main so its background spans the viewport. */
+.farm-footer { padding: 52px 0 0; background: #ded5ed; color: #393344; border: 0; font-size: 15px; }
+.footer-inner { width: min(1180px, calc(100% - 80px)); margin: auto; }
+.footer-brand { display: flex; align-items: center; gap: 18px; width: fit-content; margin-bottom: 42px; }
+.footer-logo { display: block; width: 95px; height: auto; }
+.footer-brand>span { font: 23px/1.3 Georgia, serif; letter-spacing: 1.8px; }
+.footer-brand small { display: block; margin-top: 8px; font: 11px/1.5 Arial, sans-serif; letter-spacing: 2px; }
+.footer-columns { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 55px; }
+.footer-columns section { min-width: 0; padding: 0; border: 0; }
+.footer-columns h2 { margin: 0 0 19px; font: 600 18px/1.4 Arial, sans-serif; color: #393344; }
+.footer-columns p, .footer-columns address { color: #494151; font-size: 14px; font-style: normal; line-height: 1.8; margin: 0 0 23px; max-width: none; }
+.farm-footer a { overflow-wrap: anywhere; }
+.footer-columns a { color: #49335e; }
+.farm-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-links { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 0; margin: 0; width: auto; }
+.footer-links a { font-size: 14px; letter-spacing: 0; padding: 0; border: 0; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 20px 0; margin-top: 30px; border-top: 1px solid #c4b9d4; font-size: 11px; }
+@media(max-width: 900px) { .footer-columns { gap: 28px; } }
+@media(max-width: 700px) {
+ .farm-footer { padding-top: 36px; }
+ .footer-inner { width: calc(100% - 48px); }
+ .footer-brand { gap: 12px; margin-bottom: 35px; }
+ .footer-logo { width: 70px; }
+ .footer-brand>span { font-size: 17px; letter-spacing: 1px; }
+ .footer-brand small { font-size: 10px; letter-spacing: 1.5px; }
+ .footer-columns { grid-template-columns: 1fr; gap: 28px; }
+ .footer-columns p:last-child { margin-bottom: 0; }
+ .js-ready .farm-footer nav.footer-links { display: flex; }
+}
