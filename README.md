@@ -48,3 +48,15 @@ La photo authentique `ferme_gazzini_arc_en_ciel_optimise.jpg` récupérée sur G
 ## Page produits
 
 La page produits comporte une bannière vide aux mêmes dimensions que l’accueil avec le titre « Les produits de la ferme », un espace de texte provisoire `.products-introduction`, puis six cartes Produit 1 à Produit 6. Trois colonnes sur ordinateur, deux sur tablette, une sur petit écran. La future photo de bannière se place dans `[data-photo="produits-banniere"]`. Aucun nouveau produit ni photo n’est inventé.
+
+## Contact
+
+La page reprend la capture fournie : coordonnées à gauche et formulaire sur fond beige à droite. Téléphones fournis : contact +41 76 718 85 08 ; commandes +41 76 75 74 129. Adresse confirmée : Route de Bossey 50, 1256 Troinex, Genève, Suisse. E-mail confirmé : la.ferme.gazzini@gmail.com. Le formulaire est connecté à FormSubmit (voir la procédure d’activation ci-dessous). Aucune newsletter ni fausse vérification anti-spam n’est ajoutée.
+
+## Envoi du formulaire de contact
+
+Le formulaire fait un POST HTTPS natif vers FormSubmit, à destination de `la.ferme.gazzini@gmail.com`. Aucun serveur ni mot de passe Gmail n’est nécessaire. FormSubmit traite les coordonnées et le message ; une indication figure sur le formulaire. Les champs sont obligatoires, l’e-mail est validé par le navigateur, un piège à robots est inclus et la protection anti-spam par défaut du service n’est pas désactivée.
+
+**Activation indispensable :** au premier envoi réel, FormSubmit demande la confirmation de l’adresse destinataire par e-mail. Ouvrir le message de FormSubmit dans la boîte de la ferme (vérifier les indésirables) et confirmer. Après activation, effectuer un nouvel envoi réel pour vérifier la réception. L’ajout de l’action au HTML ne prouve pas l’activation ni la livraison des messages. Aucun envoi réel n’a été effectué pendant les tests.
+
+Le formulaire nécessite Internet et fonctionne normalement depuis une page hébergée par HTTP(S). Pour tester, utiliser le serveur local ou le site publié, plutôt qu’un fichier ouvert en file://. Le service affiche sa propre confirmation et peut demander une vérification anti-spam. Si l’envoi échoue, les liens directs e-mail et téléphone restent accessibles.

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact — La Ferme Gazzini.">
-  <title>Contact — La Ferme Gazzini</title>
+  <meta name="description" content="Nous contacter — La Ferme Gazzini.">
+  <title>Nous contacter — La Ferme Gazzini</title>
   <style>
 :root { color-scheme: light; --green: #3e4c35; --muted: #6c7167; --border: #e2e3dc; }
 * { box-sizing: border-box; }
@@ -96,6 +96,36 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
  .brand-logo { width: 50px; }
  .brand .brand-subtitle { font-size: 9px; letter-spacing: 1px; }
 }
+
+.contact-page { padding: 65px 0 85px; }
+.contact-page>h1 { margin-bottom: 48px; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1.8fr; gap: 65px; align-items: start; }
+.contact-details h2 { font: 400 25px/1.35 Arial, sans-serif; margin: 0 0 30px; color: #292d28; }
+.contact-details address { font-style: normal; font-size: 16px; }
+.contact-details address p { margin: 0 0 25px; }
+.contact-details a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.email-placeholder { margin-top: 28px; color: var(--green); }
+.email-placeholder>span:first-child { display: block; font-size: 13px; }
+.email-empty { display: block; width: 100%; max-width: 240px; height: 28px; border-bottom: 1px solid var(--border); }
+.email-placeholder small { font-size: 11px; color: var(--muted); }
+.contact-form-panel { padding: 34px 38px; background: #eee6da; }
+.form-field { margin-bottom: 18px; }
+.form-field label { display: block; font-size: 15px; margin-bottom: 7px; }
+.form-field input, .form-field textarea { display: block; width: 100%; min-width: 0; padding: 11px 12px; border: 1px solid #e4e3de; border-radius: 0; background: #fff; color: #292d28; font: 16px/1.5 Arial, sans-serif; }
+.form-field textarea { resize: vertical; min-height: 180px; }
+.form-field input:focus-visible, .form-field textarea:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.required-note { font-size: 11px; margin: 0 0 15px; }
+.form-notice { font-size: 13px; line-height: 1.6; margin: 0 0 12px; }
+.send-button { border: 0; font-family: Arial, sans-serif; text-transform: uppercase; letter-spacing: .6px; }
+.send-button:disabled { background: #77816b; color: #fff; cursor: not-allowed; }
+@media (max-width: 1000px) { .contact-layout { gap: 35px; grid-template-columns: 1fr 1.5fr; } .contact-form-panel { padding: 28px; } }
+@media (max-width: 700px) { .contact-page { padding: 45px 0 55px; } .contact-page>h1 { margin-bottom: 32px; } .contact-layout { grid-template-columns: 1fr; gap: 35px; } .contact-form-panel { padding: 25px 20px; } }
+
+.contact-page>h1 { margin-bottom: 20px; }
+.contact-welcome { font-size: 18px; line-height: 1.7; margin: 0 0 45px; max-width: 650px; }
+@media (max-width: 700px) { .contact-welcome { font-size: 16px; margin-bottom: 32px; } }
+.contact-email-link { overflow-wrap: anywhere; }
+.form-honeypot { display: none; }
 </style>
 </head>
 <body>
@@ -113,10 +143,34 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
     </div>
   </header>
   <main>
-    <section class="page-content" aria-labelledby="page-title">
-      <p class="eyebrow">Restons en contact</p>
-      <h1 id="page-title">Contact</h1>
-      <p>L’adresse de la ferme, le téléphone et l’adresse e-mail seront renseignés ici.</p>
+    <section class="contact-page" aria-labelledby="page-title">
+      <h1 id="page-title">Nous contacter</h1>
+      <p class="contact-welcome">Une question ou une envie de commander ?<br>N’hésitez pas à nous contacter.</p>
+      <div class="contact-layout">
+        <div class="contact-details">
+          <h2>La Ferme Gazzini</h2>
+          <address>
+            <!-- Adresse confirmée par la famille. -->
+            <p>Route de Bossey 50<br>1256 Troinex<br>Genève, Suisse</p>
+            <p>Contact : <a href="tel:+41767188508">+41 76 718 85 08</a><br>Commandes : <a href="tel:+41767574129">+41 76 75 74 129</a></p>
+            <div class="email-placeholder"><span>E-mail</span><a class="contact-email-link" href="mailto:la.ferme.gazzini@gmail.com">la.ferme.gazzini@gmail.com</a></div>
+          </address>
+        </div>
+        <div class="contact-form-panel">
+          <form action="https://formsubmit.co/la.ferme.gazzini@gmail.com" method="POST" aria-label="Formulaire de contact" aria-describedby="form-notice">
+            <input type="hidden" name="_subject" value="Nouveau message — La Ferme Gazzini">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="form-field"><label for="contact-name">Nom <span aria-hidden="true">*</span></label><input id="contact-name" name="name" autocomplete="name" required></div>
+            <div class="form-field"><label for="contact-phone">Téléphone <span aria-hidden="true">*</span></label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="form-field"><label for="contact-email">E-mail <span aria-hidden="true">*</span></label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="form-field"><label for="contact-message">Message <span aria-hidden="true">*</span></label><textarea id="contact-message" name="message" rows="7" required></textarea></div>
+            <p class="required-note">* Champs obligatoires.</p>
+            <p id="form-notice" class="form-notice">En envoyant ce formulaire, vous transmettez vos coordonnées et votre message via FormSubmit à la Ferme Gazzini, afin que nous puissions vous répondre.</p>
+            <button class="button send-button" type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
     </section>
     <footer>La Ferme Gazzini</footer>
   </main>
