@@ -137,3 +137,27 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
  .hero:has(.hero-photo img) .hero-copy { padding: 35px 0 0; }
  .hero-photo img { object-position: 45% center; }
 }
+
+.products-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; margin-top: 42px; }
+.product-card { min-width: 0; }
+.product-photo { position: relative; aspect-ratio: 4 / 3; display: grid; place-items: center; background: #e9e7df; border-radius: 2px; }
+.product-photo .placeholder-label { flex-direction: column; gap: 9px; padding: 15px; }
+.product-photo img { position: absolute; inset: 0; }
+.product-card h2 { font: 400 24px/1.3 Georgia, serif; color: var(--green); margin: 20px 0 0; }
+@media (max-width: 1000px) { .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; } }
+@media (max-width: 500px) { .products-grid { grid-template-columns: 1fr; gap: 35px; margin-top: 30px; } .product-card h2 { margin-top: 15px; } }
+
+/* Product banner uses the same full-width hero dimensions as the homepage. */
+.products-hero .hero-copy { width: 100%; max-width: none; }
+.products-hero h1 { max-width: none; }
+.products-introduction { width: min(900px, calc(100% - 80px)); margin: auto; padding: 65px 0 45px; min-height: 180px; }
+.products-introduction p { font-size: 18px; line-height: 1.7; max-width: none; color: var(--muted); margin: 0; }
+.products-list { width: min(1240px, calc(100% - 80px)); margin: auto; padding: 0 0 90px; }
+.products-main .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 30px; margin-top: 0; }
+@media (max-width: 1000px) { .products-main .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+ .products-introduction { width: calc(100% - 48px); padding: 45px 0 35px; min-height: 150px; }
+ .products-introduction p { font-size: 16px; }
+ .products-list { width: calc(100% - 48px); padding-bottom: 55px; }
+}
+@media (max-width: 500px) { .products-main .products-grid { grid-template-columns: 1fr; gap: 35px; } }

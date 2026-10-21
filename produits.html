@@ -96,6 +96,30 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
  .brand-logo { width: 50px; }
  .brand .brand-subtitle { font-size: 9px; letter-spacing: 1px; }
 }
+
+.products-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; margin-top: 42px; }
+.product-card { min-width: 0; }
+.product-photo { position: relative; aspect-ratio: 4 / 3; display: grid; place-items: center; background: #e9e7df; border-radius: 2px; }
+.product-photo .placeholder-label { flex-direction: column; gap: 9px; padding: 15px; }
+.product-photo img { position: absolute; inset: 0; }
+.product-card h2 { font: 400 24px/1.3 Georgia, serif; color: var(--green); margin: 20px 0 0; }
+@media (max-width: 1000px) { .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; } }
+@media (max-width: 500px) { .products-grid { grid-template-columns: 1fr; gap: 35px; margin-top: 30px; } .product-card h2 { margin-top: 15px; } }
+
+/* Product banner uses the same full-width hero dimensions as the homepage. */
+.products-hero .hero-copy { width: 100%; max-width: none; }
+.products-hero h1 { max-width: none; }
+.products-introduction { width: min(900px, calc(100% - 80px)); margin: auto; padding: 65px 0 45px; min-height: 180px; }
+.products-introduction p { font-size: 18px; line-height: 1.7; max-width: none; color: var(--muted); margin: 0; }
+.products-list { width: min(1240px, calc(100% - 80px)); margin: auto; padding: 0 0 90px; }
+.products-main .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 30px; margin-top: 0; }
+@media (max-width: 1000px) { .products-main .products-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) {
+ .products-introduction { width: calc(100% - 48px); padding: 45px 0 35px; min-height: 150px; }
+ .products-introduction p { font-size: 16px; }
+ .products-list { width: calc(100% - 48px); padding-bottom: 55px; }
+}
+@media (max-width: 500px) { .products-main .products-grid { grid-template-columns: 1fr; gap: 35px; } }
 </style>
 </head>
 <body>
@@ -112,11 +136,49 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
       </nav>
     </div>
   </header>
-  <main>
-    <section class="page-content" aria-labelledby="page-title">
-      <p class="eyebrow">À découvrir</p>
-      <h1 id="page-title">Nos produits</h1>
-      <p>La présentation de nos produits sera ajoutée ici prochainement.</p>
+  <main class="home-main products-main">
+    <section class="hero products-hero" aria-labelledby="page-title">
+      <!-- Emplacement pour une future photo de bannière, même format que l’accueil. -->
+      <div class="hero-photo photo-slot" data-photo="produits-banniere"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+      <div class="hero-copy"><h1 id="page-title">Les produits de la ferme</h1></div>
+    </section>
+    <section class="products-introduction" aria-label="Introduction des produits">
+      <!-- Remplacer ce texte provisoire par l’introduction souhaitée. -->
+      <p>Texte d’introduction à venir.</p>
+    </section>
+    <section class="products-list" aria-label="Les produits">
+      <div class="products-grid">
+        <article class="product-card" aria-labelledby="produit-1">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-1"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-1">Produit 1</h2>
+        </article>
+        <article class="product-card" aria-labelledby="produit-2">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-2"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-2">Produit 2</h2>
+        </article>
+        <article class="product-card" aria-labelledby="produit-3">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-3"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-3">Produit 3</h2>
+        </article>
+        <article class="product-card" aria-labelledby="produit-4">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-4"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-4">Produit 4</h2>
+        </article>
+        <article class="product-card" aria-labelledby="produit-5">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-5"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-5">Produit 5</h2>
+        </article>
+        <article class="product-card" aria-labelledby="produit-6">
+          <!-- Remplacer le contenu de cet emplacement par la photo du produit plus tard. -->
+          <div class="product-photo photo-slot" data-photo="produit-6"><span class="placeholder-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8" cy="9" r="1.5"/><path d="m3 17 6-5 4 4 3-3 5 5"/></svg><span>Ajouter une photo</span></span></div>
+          <h2 id="produit-6">Produit 6</h2>
+        </article>
+      </div>
     </section>
     <footer>La Ferme Gazzini</footer>
   </main>

@@ -44,3 +44,7 @@ Le logo actif est désormais `Crayon Sheep with Bees and Flowers.png`, récupér
 ## Photo de la bannière
 
 La photo authentique `ferme_gazzini_arc_en_ciel_optimise.jpg` récupérée sur GitHub est désormais intégrée directement dans l’accueil, derrière le titre. Son original est conservé. Un voile sombre assure la lisibilité du texte blanc. Les trois emplacements des sections restent vides.
+
+## Page produits
+
+La page produits comporte une bannière vide aux mêmes dimensions que l’accueil avec le titre « Les produits de la ferme », un espace de texte provisoire `.products-introduction`, puis six cartes Produit 1 à Produit 6. Trois colonnes sur ordinateur, deux sur tablette, une sur petit écran. La future photo de bannière se place dans `[data-photo="produits-banniere"]`. Aucun nouveau produit ni photo n’est inventé.
