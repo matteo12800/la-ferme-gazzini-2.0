@@ -181,7 +181,13 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
 
 body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
 
-.feature-photo[data-photo="accueil-produits"] { aspect-ratio: 2 / 3; }
+/* Match the photo area to the neighbouring text height without cropping it. */
+.feature-section.feature-reversed { align-items: stretch; }
+.feature-photo[data-photo="accueil-produits"] { aspect-ratio: auto; min-height: 0; background: transparent; }
+.feature-photo[data-photo="accueil-produits"] img { object-fit: contain; }
+@media (max-width: 700px) {
+ .feature-photo[data-photo="accueil-produits"] { height: 260px; }
+}
 </style>
 </head>
 <body>
