@@ -217,6 +217,22 @@ body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
 
 .grta-logo-space { border: 0; background: transparent; }
 .grta-logo-space img { display: block; width: 100%; height: auto; }
+
+/* Compact GRTA strip above the footer. */
+.grta-banner { padding: 24px 40px; }
+.grta-inner { gap: 35px; }
+.grta-logo-space { width: 115px; min-height: 0; }
+.grta-copy h2 { font-size: 26px; margin: 6px 0 8px; }
+.grta-copy .grta-kicker { font-size: 10px; }
+.grta-copy .grta-name { font-size: 15px; margin-bottom: 4px; }
+.grta-copy .grta-caption { font-size: 11px; }
+@media (max-width: 700px) {
+ .grta-banner { padding: 22px 24px; }
+ .grta-inner { flex-direction: row; align-items: center; gap: 20px; }
+ .grta-logo-space { width: 80px; }
+ .grta-copy h2 { font-size: 21px; }
+ .grta-copy .grta-name { font-size: 13px; }
+}
 </style>
 </head>
 <body>
