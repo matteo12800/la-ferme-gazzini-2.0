@@ -68,3 +68,7 @@ Un pied de page identique est présent après le contenu principal des quatre pa
 ## Typographie
 
 Bree Serif (Fontsource 5.3.0) est appliquée à tous les textes, menus, titres et champs. La version latine WOFF2, incluant les accents français, est intégrée dans chaque HTML pour fonctionner hors ligne. Le fichier de police original et sa licence SIL OFL sont conservés dans fonts/. Aucune requête Google Fonts n’est nécessaire.
+
+## Événements
+
+La page evenements.html est accessible immédiatement après Nos produits dans le menu des cinq pages. Bannière vide au même format que les autres pages. La fête d’automne / journée portes ouvertes du 11 octobre 2026 (12 h – 16 h) est présentée comme un événement passé, à partir des flyers fournis. Le programme comprend plats de courges, dégustation de confitures, vente, musique, visite et présentation des activités pour 2027. Un espace photo 4/3 est réservé à droite. Aucune prochaine date ni photo n’est inventée.

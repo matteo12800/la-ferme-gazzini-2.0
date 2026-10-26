@@ -131,6 +131,15 @@ footer { padding: 26px 0; border-top: 1px solid var(--border); font-size: 12px; 
 }
 
 body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
+
+/* Keep five navigation entries comfortable on tablet and smaller laptops. */
+@media (min-width: 701px) and (max-width: 1100px) {
+ .header-inner { gap: 18px; }
+ .brand { font-size: 18px; gap: 10px; letter-spacing: .6px; }
+ .brand-logo { width: 60px; }
+ #navigation { gap: 17px; }
+ #navigation a { font-size: 12px; letter-spacing: 0; }
+}
 </style>
 </head>
 <body>
@@ -142,6 +151,7 @@ body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
         <a href="index.html">Accueil</a>
 
         <a href="produits.html">Nos produits</a>
+        <a href="evenements.html">Événements</a>
         <a href="galerie.html" aria-current="page">Galerie</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -176,6 +186,7 @@ body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
             <a href="index.html#notre-histoire">Notre histoire</a>
             <a href="produits.html">Nos produits</a>
             <a href="galerie.html">La galerie</a>
+            <a href="evenements.html">Les événements</a>
           </nav>
         </section>
       </div>
