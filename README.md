@@ -64,3 +64,7 @@ Le formulaire nécessite Internet et fonctionne normalement depuis une page héb
 ## Pied de page lavande
 
 Un pied de page identique est présent après le contenu principal des quatre pages, inspiré de la référence 3.png : identité et trois colonnes Contacter, Commander, Suivre l’aventure. Fond lavande #ded5ed, logo original intégré et liens téléphone/e-mail. Les liens vers l’histoire, les produits et la galerie remplacent une inscription newsletter non configurée. Toute modification des coordonnées ou du pied de page doit être appliquée aux quatre HTML.
+
+## Typographie
+
+Bree Serif (Fontsource 5.3.0) est appliquée à tous les textes, menus, titres et champs. La version latine WOFF2, incluant les accents français, est intégrée dans chaque HTML pour fonctionner hors ligne. Le fichier de police original et sa licence SIL OFL sont conservés dans fonts/. Aucune requête Google Fonts n’est nécessaire.
