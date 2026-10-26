@@ -197,6 +197,23 @@ body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
  #navigation { gap: 17px; }
  #navigation a { font-size: 12px; letter-spacing: 0; }
 }
+
+.grta-banner { background: #f0f1e9; margin: 0 0 65px; padding: 44px 40px; border-block: 1px solid #dfe3d4; }
+.grta-inner { max-width: 900px; margin: auto; display: flex; align-items: center; gap: 64px; }
+.grta-logo-space { width: 185px; min-height: 150px; flex-shrink: 0; background: #fafbf6; border: 1px dashed #aeb89b; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #536344; }
+.grta-logo-space>span { font-size: 13px; }
+.grta-logo-space strong { font-size: 34px; font-weight: 400; letter-spacing: 3px; }
+.grta-logo-space small { font-size: 10px; color: #777e6c; }
+.grta-copy .grta-kicker { font-size: 11px; letter-spacing: 2px; color: #667354; text-transform: uppercase; margin: 0; }
+.grta-copy h2 { font-size: 34px; line-height: 1.18; margin: 12px 0 14px; }
+.grta-copy .grta-name { font-size: 18px; color: #47583c; margin: 0 0 7px; }
+.grta-copy .grta-caption { font-size: 12px; color: #747a6c; margin: 0; }
+@media (max-width: 700px) {
+ .grta-banner { padding: 35px 24px; margin-bottom: 45px; }
+ .grta-inner { flex-direction: column; align-items: flex-start; gap: 26px; }
+ .grta-logo-space { width: 155px; min-height: 125px; }
+ .grta-copy h2 { font-size: 30px; }
+}
 </style>
 </head>
 <body>
@@ -230,6 +247,18 @@ body, button, input, textarea, select { font-family: 'Bree Serif', serif; }
         <p>Depuis, l’exploitation se développe progressivement, grâce à un travail régulier et à une attention constante portée à la qualité et à la fertilité des sols, notamment par la pratique des rotations culturales et l’apport de compost. Les plantations sont adaptées aux caractéristiques du terrain et font l’objet d’un entretien tout au long de l’année, comprenant notamment le paillage et la taille.</p>
         <p>À l’été 2026, les plantations ont révélé toute leur vigueur : de magnifiques buissons de lavande, généreux et parfumés, ainsi que de belles mûres, grosses, juteuses et prêtes à être dégustées. Les raisins et les kiwis ont encore besoin d’une année pour se développer.</p>
         <p>Les premières récoltes sont désormais au rendez-vous, fruit d’un travail patient et soigné, mené dans le respect de la terre et dans une démarche de proximité.</p>
+      </div>
+    </section>
+    <section class="grta-banner" aria-labelledby="grta-title">
+      <div class="grta-inner">
+        <!-- Remplacer cet emplacement par le logo officiel GRTA lorsqu’il sera fourni. -->
+        <div class="grta-logo-space" aria-label="Emplacement réservé au logo officiel GRTA"><span>Logo officiel</span><strong>GRTA</strong><small>Emplacement réservé</small></div>
+        <div class="grta-copy">
+          <p class="grta-kicker">Le goût du local</p>
+          <h2 id="grta-title">De notre région,<br>tout simplement.</h2>
+          <p class="grta-name">Genève Région – Terre Avenir</p>
+          <p class="grta-caption">Notre engagement pour une agriculture de proximité.</p>
+        </div>
       </div>
     </section>
     <div class="home-features">
